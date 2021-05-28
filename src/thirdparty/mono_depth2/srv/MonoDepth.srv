@@ -1,0 +1,5 @@
+sensor_msgs/Image input_image
+
+---
+sensor_msgs/Image output_image
+bool success

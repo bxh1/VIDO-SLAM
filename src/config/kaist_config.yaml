@@ -1,0 +1,110 @@
+%YAML:1.0
+
+# System parameters
+slam_mode: 0  #0:vo  1:vio
+image_path: /kaist/urban39/urban39-pankyo/image/stereo_left
+imu_path: /kaist/urban39/urban39-pankyo/sensor_data/xsens_imu.csv
+start_index: 3350
+
+# Camera calibration and distortion parameters (OpenCV)
+
+# # if run_mode is realtime
+# Camera.width: 640
+# Camera.height: 192
+
+# Camera.fx: 408.201
+# Camera.fy: 408.69
+# Camera.cx: 304.1329
+# Camera.cy: 133.344
+
+# offline
+Camera.width: 1280
+Camera.height: 560
+
+Camera.fx: 816.402
+Camera.fy: 817.38
+Camera.cx: 608.2658
+Camera.cy: 266.688
+
+Camera.k1: -0.05004
+Camera.k2: 0.120012
+Camera.p1: -0.0006259
+Camera.p2: -0.00118
+Camera.k3: -0.063505
+
+
+CarModel: "PATH_TO_VIDO-SLAM/vido_slam/include/viewer/car.obj"
+FontPath: "PATH_TO_VIDO-SLAM/vido_slam/include/viewer/AnonymousPro.ttf"
+# Camera frames per second
+Camera.fps: 10
+
+# IR projector baseline times fx (aprox.)
+Camera.bf: 387.57
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 0
+
+#--------------------------------------------------------------------------------------------
+# System Parameters
+#--------------------------------------------------------------------------------------------
+
+# Switch for Dataset (1 for Oxford MultiMotion Dataset, 2 for KITTI dataset, 3 for KAIST dataset...)
+ChooseData: 3
+
+# Depthmap values factor
+DepthMapFactor: 500
+
+# Close/Far Depth threshold
+#ThDepthBG: 40.0
+ThDepthBG: 80.0
+ThDepthOBJ: 60.0
+
+# Max Tracking Points on Background and Object in each frame
+MaxTrackPointBG: 3000 # 1200
+MaxTrackPointOBJ: 800 # 800
+
+# OutPut Flow Magnitude and Distribution Threshold
+SFMgThres: 0.12 # 0.05 #0.12
+SFDsThres: 0.3 # 0.99 #0.3
+
+# Window Size and Overlapping Size for Local Batch Optimization
+WINDOW_SIZE: 20
+OVERLAP_SIZE: 4
+
+# Use sampled feature or detected feature for background (1: sampled, 0: detected)
+UseSampleFeature: 0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters (NOTE: only FAST corners are used in this system.)
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 2000
+
+# ORB Extractor: Scale factor between levels in the scale pyramid
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+# Transformation from camera 0 to body-frame (imu)
+Tbc: !!opencv-matrix
+   rows: 4
+   cols: 4
+   dt: f
+   data: [-0.00680499, -0.0153215, 0.99985, 1.71239,
+          -0.999977, 0.000334627, -0.00680066, 0.247401,
+          0.000230383, -0.999883, -0.0153234, -0.11589,
+          0, 0, 0, 1]
+
+# IMU noise
+IMU.NoiseGyro: 0.001561 # 1.6968e-04 
+IMU.NoiseAcc: 0.0007 # 2.0000e-3
+IMU.GyroWalk: 0.000058
+IMU.AccWalk: 0.0003 # 3.0000e-3
+IMU.Frequency: 200
+

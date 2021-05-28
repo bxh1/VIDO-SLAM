@@ -1,0 +1,6 @@
+sensor_msgs/Image previous_image
+sensor_msgs/Image current_image
+
+---
+sensor_msgs/Image output_image
+bool success

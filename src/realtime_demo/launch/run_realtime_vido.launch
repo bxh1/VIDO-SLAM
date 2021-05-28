@@ -1,0 +1,12 @@
+<launch>
+    <arg name="config_path" default = "$(find demo)/../config/kaist_config.yaml" />
+    <arg name="model_path" default="$(find demo)/urdf/lexus.urdf" />
+    <param name="robot_description" textfile="$(arg model_path)" />
+    <param name="frame_id" value="vido_camera_link" />
+    <node name="flow_net" pkg="flow_net" type="run_flow_net.py"  output="screen"/>
+    <node name="mask_rcnn" pkg="mask_rcnn" type="run_mask_rcnn.py"  output="screen"/>
+    <node name="mono_depth2" pkg="mono_depth2" type="run_mono_depth.py"  output="screen"/>
+    <node name="demo" pkg="demo" type="demo" output="screen"/>
+          <param name="config_file" type="string" value="$(arg config_path)" />
+
+</launch>

@@ -1,0 +1,77 @@
+%YAML:1.0
+
+# System parameters
+slam_mode: 0   #0:vo  1:vio
+image_path: /kitti/2011_09_26_drive_0032_sync/image_02/data
+imu_path: /kaist/urban39/urban39-pankyo/sensor_data/xsens_imu.csv
+start_index: 1
+
+# Camera calibration and distortion parameters (OpenCV)
+Camera.fx: 369.432
+Camera.fy: 369.432
+Camera.cx: 312
+Camera.cy: 88.50
+
+Camera.k1: 0.0
+Camera.k2: 0.0
+Camera.p1: 0.0
+Camera.p2: 0.0
+Camera.k3: 0.0
+
+Camera.width: 640
+Camera.height: 192
+
+# Camera frames per second
+Camera.fps: 10.0
+
+# IR projector baseline times fx (aprox.)
+Camera.bf: 369
+
+# Color order of the images (0: BGR, 1: RGB. It is ignored if images are grayscale)
+Camera.RGB: 0
+
+#--------------------------------------------------------------------------------------------
+# System Parameters
+#--------------------------------------------------------------------------------------------
+
+# Switch for Dataset (1 for Oxford MultiMotion Dataset, 2 for KITTI dataset, 3...)
+ChooseData: 2
+
+# Deptmap values factor
+DepthMapFactor: 256
+
+# Close/Far Depth threshold
+ThDepthBG: 5000.0
+ThDepthOBJ: 25.0
+
+# Max Tracking Points on Background and Object in each frame
+MaxTrackPointBG: 1000 # 1200
+MaxTrackPointOBJ: 500 # 800
+
+# OutPut Flow Magnitude and Distribution Threshold
+SFMgThres: 0.12 # 0.05
+SFDsThres: 0.3 # 0.99
+
+# Window Size and Overlapping Size for Local Batch Optimization
+WINDOW_SIZE: 20
+OVERLAP_SIZE: 4
+
+# Use sampled feature or detected feature for background (1: sampled, 0: detected)
+UseSampleFeature: 0
+
+#--------------------------------------------------------------------------------------------
+# ORB Parameters (NOTE: only FAST corners are used in this system.)
+#--------------------------------------------------------------------------------------------
+
+# ORB Extractor: Number of features per image
+ORBextractor.nFeatures: 2500
+
+# ORB Extractor: Scale factor between levels in the scale pyramid
+ORBextractor.scaleFactor: 1.2
+
+# ORB Extractor: Number of levels in the scale pyramid
+ORBextractor.nLevels: 8
+
+# ORB Extractor: Fast threshold
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7

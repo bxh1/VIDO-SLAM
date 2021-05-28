@@ -1,0 +1,10 @@
+<launch>
+    <arg name="config_path" default = "$(find demo)/../config/kaist_config.yaml" />
+    <arg name="model_path" default="$(find demo)/urdf/lexus.urdf" />
+    <param name="robot_description" textfile="$(arg model_path)" />
+    <param name="frame_id" value="vido_camera_link" />
+    <node name="demo" pkg="demo" type="demo" output="screen" />
+          <param name="config_file" type="string" value="$(arg config_path)" />
+          <param name="run_mode" type="string" value="offline" />
+    <!-- <node name="rvizvisual" pkg="rviz" type="rviz" output="log" args="$(find demo)/../config/vido_rviz_config.rviz" /> -->
+</launch>

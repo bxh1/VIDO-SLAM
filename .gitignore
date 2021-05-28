@@ -1,0 +1,5 @@
+build
+devel
+.vscode
+cmake-build-debug
+vido_slam/build

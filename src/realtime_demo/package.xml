@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>demo</name>
+  <version>0.0.0</version>
+  <description>The demo package</description>
+
+ 
+  <maintainer email="imagine_b@163.com">imagine</maintainer>
+
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <!-- Commonly used license strings: -->
+  <!--   BSD, MIT, Boost Software License, GPLv2, GPLv3, LGPLv2.1, LGPLv3 -->
+  <license>TODO</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>message_generation</build_depend>
+  <exec_depend>message_runtime</exec_depend>
+
+
+
+  <depend>roscpp</depend>
+  <depend>std_msgs</depend>
+  <depend>nav_msgs</depend>
+  <depend>python_service_starter</depend>
+  <depend>visualization_msgs</depend>
+  <depend>darknet_ros_msgs</depend>
+  <depend>flow_net</depend>
+  <depend>mask_rcnn</depend>
+  <depend>mono_depth2</depend>
+
+
+  <depend>sensor_msgs</depend>
+  <depend>rosbag</depend>
+  <depend>rosbag_storage</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+  <depend>tf2_ros</depend>
+  <depend>tf2_sensor_msgs</depend>
+
+  <export>
+  </export>
+</package>

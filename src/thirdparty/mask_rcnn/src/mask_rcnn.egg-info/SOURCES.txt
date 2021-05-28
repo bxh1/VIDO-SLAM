@@ -1,0 +1,6 @@
+README.md
+setup.py
+src/mask_rcnn.egg-info/PKG-INFO
+src/mask_rcnn.egg-info/SOURCES.txt
+src/mask_rcnn.egg-info/dependency_links.txt
+src/mask_rcnn.egg-info/top_level.txt
