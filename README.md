@@ -1,4 +1,4 @@
-## VIDO-SLAM
+# VIDO-SLAM
 
 VIDO-SLAM is a Visual-Inertial Dynamic Object SLAM System that is able to estimate the camera poses, perform Visual, Visual-Inertial SLAM with monocular camera, track dynamic objects.  We provide demo to run the SLAM system in the Kaist Dataset using monocular camera, with or without IMU.
 
@@ -65,7 +65,7 @@ cd VIDO-SLAM
 catkin_make
 ```
 
-#### 5. Running the Demo
+### 5. Running the Demo
 
 VIDO-SLAM has two modes: offline and online.
 
