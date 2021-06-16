@@ -2,13 +2,13 @@
 
 VIDO-SLAM is a Visual-Inertial Dynamic Object SLAM System that is able to estimate the camera poses, perform Visual, Visual-Inertial SLAM with monocular camera, track dynamic objects.  We provide demo to run the SLAM system in the Kaist Dataset using monocular camera, with or without IMU.
 
-This software is based on [VDO-SLAM](https://github.com/halajun/VDO_SLAM) , [FlowNet](https://github.com/sniklaus/pytorch-liteflownet),  [Mask RCNN](https://github.com/facebookresearch/maskrcnn-benchmark). [MonoDepth2](https://github.com/nianticlabs/monodepth2).
+This software is based on [VDO-SLAM](https://github.com/halajun/VDO_SLAM) , [FlowNet](https://github.com/sniklaus/pytorch-liteflownet),  [Mask RCNN](https://github.com/facebookresearch/maskrcnn-benchmark). [MonoDepth2](https://github.com/nianticlabs/monodepth2), [ORB_SLAM3](https://github.com/UZ-SLAMLab/ORB_SLAM3)
 
 **Features:**
 
 - Integrate MonoDepth2,  FlowNet and  MaskRcnn with ROS that can run in SLAM system in real time
 - Visual-Inertial SLAM in real-world outdoor scenarios
-- Track and Estimate dynamic objects pose
+- Track and Estimate dynamic objects motion
 
 ### 1. Demo
 
@@ -87,3 +87,7 @@ roslaunch demo run_realtime_vido.launch
 The VO and VIO switch options are in the config file:
 
 ![](figure/1.png)
+
+### 6. TODO
+
+Visual-Inertial optimization

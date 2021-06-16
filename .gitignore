@@ -3,3 +3,5 @@ devel
 .vscode
 cmake-build-debug
 vido_slam/build
+vido_slam/CMakeLists.txt
+vido_slam/lib

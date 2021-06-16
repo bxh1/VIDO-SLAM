@@ -2,8 +2,8 @@
 
 # System parameters
 slam_mode: 0  #0:vo  1:vio
-image_path: /kaist/urban39/urban39-pankyo/image/stereo_left
-imu_path: /kaist/urban39/urban39-pankyo/sensor_data/xsens_imu.csv
+image_path: path_to_urban39-pankyo/image/stereo_left
+imu_path: path_to_urban39-pankyo/sensor_data/xsens_imu.csv
 start_index: 3350
 
 # Camera calibration and distortion parameters (OpenCV)
